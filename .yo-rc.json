@@ -1,0 +1,8 @@
+{
+  "generator-chopstart": {
+    "cmsType": "None",
+    "compressMethod": "Build",
+    "cssFramework": "Bootstrap-Sass",
+    "jsOptions": []
+  }
+}

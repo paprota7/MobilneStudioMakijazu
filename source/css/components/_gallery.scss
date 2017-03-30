@@ -1,0 +1,113 @@
+.gallery {
+  padding-bottom: 120px;
+	background-color: rgba(236, 0, 140, 0.1);
+	h2 {
+		font-size: 48px;
+		color: #555;
+		text-align: center;
+		font-weight: bold;
+		margin: 60px 0 120px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+  p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #ff7070;
+  }
+}
+.grid {
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: -80px;
+    right: -80px;
+    bottom: -60px;
+    background-color: rgba(#ffffff, 0.4);
+    @include border-radius(10px);
+  }
+}
+.grid-item,
+.grid-sizer {
+  @include calc(width, '33.333% - 20px');
+}
+.grid-item {
+  margin-bottom: 30px;
+  a {
+    display: block;
+    position: relative;
+    z-index: 2;
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      background-color: rgba(#000, 0.5);
+      @include border-radius(5px);
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+    }
+    &:hover {
+      @include scale(1.05);
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+      &:after {
+        opacity: 1;
+        @include transition-property(all);
+        @include transition-duration(0.3s);
+      }
+      i {
+        opacity: 1;
+        @include transition-property(all);
+        @include transition-duration(0.3s);
+      }
+    }
+  }
+  img {
+		width: 100%;
+		@include border-radius(5px);
+		@include box-shadow(-4px 3px 22px rgba(0,0,0,.6));
+	}
+  i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 48px;
+    color: #fff;
+    z-index: 100;
+    opacity: 0;
+    @include translate(-50%, -50%);
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    &:before {
+      position: relative;
+      z-index: 10;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -16px;
+      left: -20px;
+      right: -20px;
+      bottom: -16px;
+      background-color: rgba(236, 0, 140, 0.6);
+      @include border-radius(50%);
+    }
+  }
+}
+.grid-item--2 {
+  @include calc(width, '66.666% - 20px');
+}
+.gutter-sizer {
+	width: 30px;
+}

@@ -1,0 +1,76 @@
+.offerts {
+  padding-bottom: 100px;
+  .offerts-right {
+    h3 {
+      text-align: right;
+    }
+    p {
+      text-align: right;
+      margin-right: 0;
+      margin-left: 20%;
+    }
+    .price {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  .col-md-12 + .col-md-12 {
+    padding-top: 60px;
+  }
+  h2 {
+    font-size: 24px;
+    color: #555;
+    text-align: center;
+    font-weight: bold;
+    margin: 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  img {
+    max-width: 100%;
+    margin-bottom: 40px;
+    @include border-radius(5px);
+    @include box-shadow(-4px 3px 22px rgba(0,0,0,.6));
+  }
+  h3 {
+    font-weight: bold;
+    color: #222;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 15px 0 20px;
+    letter-spacing: 0.8px;
+  }
+  p {
+    line-height: 27px;
+    color: #696d71;
+    margin-right: 20%;
+  }
+  .sale {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #ff7070;
+  }
+  .price {
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 0;
+    text-transform: uppercase;
+    background-color: rgba(236, 0, 140, 0.6);
+    padding: 15px 40px;
+    text-align: center;
+    @include border-radius(4px);
+    @include transition-property(all);
+    @include transition-duration(0.3s);
+    span {
+      font-size: 26px;
+      margin-left: 10px;
+    }
+    &:hover {
+      @include scale(1.05);
+      @include transition-property(all);
+      @include transition-duration(0.3s);
+    }
+  }
+}
